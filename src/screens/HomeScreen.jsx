@@ -50,7 +50,7 @@ const HomeScreen = () => {
   const swipeRef = useRef(null);
 
   return (
-    <SafeAreaView className='pt-8 flex-1'>
+    <SafeAreaView className='py-12 flex-1'>
       <View className='flex-row items-center justify-between px-4'>
         <TouchableOpacity>
           <Image
@@ -59,7 +59,9 @@ const HomeScreen = () => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Modal')}
+        >
           <Image
             source={{
               uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz_GVGj8I4M7GmSgSMuCOW0Py27HuYy3Bp2nzOtgYB6nqBW82akJD8QSwN05TQyu_Nq_8&usqp=CAU',
