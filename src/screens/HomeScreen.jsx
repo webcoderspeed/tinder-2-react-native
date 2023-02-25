@@ -7,10 +7,10 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
-import React from 'react';
+import React, { useRef } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import useAuth from '../hooks/useAuth';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, Entypo } from '@expo/vector-icons';
 import Swiper from 'react-native-deck-swiper';
 
 const DUMMY_DATA = [
@@ -45,8 +45,9 @@ const DUMMY_DATA = [
 
 const HomeScreen = () => {
   const navigation = useNavigation();
-
   const { user, logout } = useAuth();
+
+  const swipeRef = useRef(null);
 
   return (
     <SafeAreaView className='pt-8 flex-1'>
@@ -77,6 +78,7 @@ const HomeScreen = () => {
       </View>
       <View className='flex-1 items-center justify-center -mt-6'>
         <Swiper
+          ref={swipeRef}
           cards={DUMMY_DATA}
           containerStyle={{
             backgroundColor: 'transparent',
@@ -84,24 +86,31 @@ const HomeScreen = () => {
           stackSize={5}
           cardIndex={0}
           verticalSwipe={false}
+          onSwipedLeft={() => {
+            console.log('Swipe PASS');
+          }}
+          onSwipedRight={() => {
+            console.log('Swipe MATCH');
+          }}
+          backgroundColor='#4fd0e9'
           overlayLabels={{
             left: {
               title: 'NOPE',
               style: {
                 label: {
                   textAlign: 'right',
-                  color: 'red'
-                }
-              }
+                  color: 'red',
+                },
+              },
             },
             right: {
               title: 'MATCH',
               style: {
                 label: {
-                  color: '#4DED30'
-                }
-              }
-            }
+                  color: '#4DED30',
+                },
+              },
+            },
           }}
           renderCard={(card) => {
             return (
@@ -128,6 +137,28 @@ const HomeScreen = () => {
             );
           }}
         />
+      </View>
+
+      <View className='flex items-center justify-evenly flex-row'>
+        <TouchableOpacity className='items-center justify-center rounded-full w-16 h-16 bg-red-200'
+          onPress={() => swipeRef.current.swipeLeft()}
+        >
+          <Entypo
+            name='cross'
+            size={24}
+            color='red'
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity className='items-center justify-center rounded-full w-16 h-16 bg-green-200'
+          onPress={() => swipeRef.current.swipeRight()}
+        >
+          <Entypo
+            name='heart'
+            size={24}
+            color='green'
+          />
+        </TouchableOpacity>
       </View>
 
       {/* <Button
