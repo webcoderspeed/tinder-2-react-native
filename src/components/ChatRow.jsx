@@ -61,7 +61,7 @@ const ChatRow = ({ matchDetails }) => {
       />
 
       <View>
-        <Text className='text-lg font-semibold'>
+        <Text className='text-lg font-semibold capitalize'>
           {matchedUserInfo?.displayName}
         </Text>
         <Text>{lastMessage ?? 'Say Hi!'}</Text>
