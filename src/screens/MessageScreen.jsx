@@ -70,7 +70,7 @@ const MessageScreen = () => {
   }
 
   return (
-    <SafeAreaView className='py-12 flex-1'>
+    <SafeAreaView className='flex-1'>
       <Header
         title={getMatchedUserInfo(matchDetails?.users, user.uid)?.displayName}
       />

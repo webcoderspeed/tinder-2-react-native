@@ -192,7 +192,7 @@ const HomeScreen = () => {
   }
 
   return (
-    <SafeAreaView className='py-12 flex-1'>
+    <SafeAreaView className='flex-1'>
       <View className='flex-row items-center justify-between px-4'>
         <TouchableOpacity onPress={logout}>
           <Image
