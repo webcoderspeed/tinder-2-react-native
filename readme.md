@@ -89,5 +89,44 @@ The Tinder App uses Firebase Firestore as its database to store user and chat in
 
 > In addition to the Firestore schema, the app also uses Firebase Authentication to store user authentication information and Firebase Storage to store user profile pictures.
 
+### Screenshots:
+<center>
+<img 
+  src='./screenshots/Simulator Screen Shot - iPhone 14 Pro - 2023-03-11 at 19.47.37.png'
+  height='500'
+/>
+<img 
+src='./screenshots/Simulator Screen Shot - iPhone 14 Pro - 2023-03-11 at 20.02.38.png'
+  height='500'
+/>
+<img 
+  src='./screenshots/Simulator Screen Shot - iPhone 14 Pro - 2023-03-11 at 20.03.28.png'
+  height='500'
+/>
+<img 
+  src='./screenshots/Simulator Screen Shot - iPhone 14 Pro - 2023-03-11 at 20.05.04.png'
+  height='500'
+/>
+<img 
+  src='./screenshots/Simulator Screen Shot - iPhone 14 Pro Max - 2023-03-11 at 20.02.34.png'
+  height='500'
+/>
+<img 
+  src='./screenshots/Simulator Screen Shot - iPhone 14 Pro Max - 2023-03-11 at 20.03.26.png'
+  height='500'
+/>
+<img 
+  src='./screenshots/Simulator Screen Shot - iPhone 14 Pro - 2023-03-11 at 20.14.11.png'
+  height='500'
+/>
+<img 
+  src='./screenshots/Simulator Screen Shot - iPhone 14 Pro Max - 2023-03-11 at 20.05.03.png'
+  height='500'
+/>
+
+
+</center>
+
 ### Conclusion
 The Tinder App is a powerful dating application that allows users to create a profile, swipe left or right on potential matches, and chat with matches if both parties are interested. The app is built using React Native, Firebase, and Tailwind CSS. This documentation has provided an overview of the app's features, installation instructions, and how to use it.
+
