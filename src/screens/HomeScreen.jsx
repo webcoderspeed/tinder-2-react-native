@@ -70,7 +70,7 @@ const HomeScreen = () => {
           navigation.navigate('Modal');
         }
       }),
-    []
+    [db, user]
   );
 
   useEffect(() => {
@@ -86,7 +86,7 @@ const HomeScreen = () => {
       );
 
       const passes = passesData.docs.map((doc) => doc.id);
-      const swipes = passesData.docs.map((doc) => doc.id);
+      const swipes = swipesData.docs.map((doc) => doc.id);
 
       const passedUserId = passes.length ? passes : ['test'];
       const swipedUserId = swipes.length ? swipes : ['test'];
@@ -112,7 +112,7 @@ const HomeScreen = () => {
     fetchCards();
 
     return unsubscribe;
-  }, []);
+  }, [db, user]);
 
   async function swipeLeft(cardIndex) {
     if (!profiles[cardIndex]) return;
